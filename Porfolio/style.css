@@ -1,0 +1,60 @@
+.bg-img{
+    background-image: url("photo_2024-11-05_22-37-27.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+#name{
+    width: 15ch;
+    overflow:hidden;
+    animation: typed 3s steps(15) infinite alternate,blink 0.5s step-end infinite alternate ;
+}
+@keyframes typed{
+    from{
+        width:0;
+    }
+}
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+#edit{
+    border-right:3px solid;
+    width: 10ch;
+    overflow: hidden;
+
+    animation: backcolor 3s steps(10) infinite alternate,blink 0.5s step-end infinite alternate;
+
+}
+@keyframes backcolor{
+    from{
+        width:0;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color:transparent;
+    }
+    
+}
+
+@keyframes appear {
+    from {
+      opacity: 0;
+       /*clip-path: inset(50% 50% 50% 50%);*/
+      scale: 0;
+    }
+    to {
+      opacity: 1;
+       /*clip-path: inset(0 0 0 0);*/
+      scale: 1;
+    }
+  }
+  
+  .ani {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+    transition-duration: 0.3s;
+  }
